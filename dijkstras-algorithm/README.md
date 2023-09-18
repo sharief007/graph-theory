@@ -2,6 +2,93 @@
 
 Dijkstra's Algorithm is a method used to find the shortest path from a specified starting point (source) to all other points (nodes) in a weighted graph, where the edge weights represents `non-negative distances` between nodes. It ensures that the shortest path to each node is determined accurately, considering all possible routes through the graph, and is commonly employed in navigation and network routing applications.
 
+### Examples
+
+1. **Simple Weighted Graph**:
+
+```
+       A
+      / \
+     2   3
+    /     \
+   B-------C
+      \   /
+        1
+        D
+```
+
+Initial distances: A: ∞, B: ∞, C: ∞, D: ∞
+
+Applying Dijkstra's Algorithm:
+
+1. Start from A.
+2. Update distances: A: 0, B: 2, C: 3, D: ∞
+3. Move to B.
+4. Update distances: A: 0, B: 2, C: 3, D: 3
+5. Move to D.
+6. Update distances: A: 0, B: 2, C: 3, D: 3
+7. Move to C.
+8. Update distances: A: 0, B: 2, C: 3, D: 3
+
+Final distances: A: 0, B: 2, C: 3, D: 3
+
+2. **Graph with Negative Weight**:
+
+```
+       A
+      / \
+     1  -3
+    /     \
+   B-------C
+      \   /
+      -2
+        D
+```
+
+This graph has negative weights, so Dijkstra's Algorithm may not work correctly. It's designed for non-negative weights.
+
+3. **Disconnected Graph**:
+
+```
+   A        B       C
+   |        |       |
+   1        2       3
+   |        |       |
+   D        E       F
+```
+
+If you start from any vertex, you won't be able to reach the other vertices. Dijkstra's Algorithm would report infinity for all unreachable vertices.
+
+4. **Graph with Loop**:
+
+```
+   A--1--B
+   |     |
+   2     3
+   |     |
+   C--4--D
+```
+
+In this case, you have a loop between A, B, C, and D. This can lead to infinite loops in Dijkstra's Algorithm.
+
+5. **Graph with Duplicate Edges**:
+
+```
+   A--1--B
+   |     |
+   2     3
+   |     |
+   C--4--D
+   |     |
+   1     5
+   |     |
+   E--2--F
+```
+
+Duplicate edges can be handled, but it's important to make sure they are handled correctly in the implementation of Dijkstra's Algorithm.
+
+Remember, Dijkstra's Algorithm is designed for non-negative weighted graphs without negative cycles. If your graph violates these conditions, the algorithm may not produce correct results.
+
 ### Implementation
 
 ```java
