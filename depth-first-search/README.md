@@ -134,3 +134,8 @@ class Graph {
 }
 
 ```
+
+### Complexity Analysis
+
+- **Time Complexity**: The time complexity of the DFS algorithm is O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+- **Space Complexity**: The space complexity of the DFS algorithm is O(V), where V is the number of vertices in the graph.
