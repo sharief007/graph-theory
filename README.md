@@ -8,7 +8,7 @@
 
 - [**Depth First Search (DFS)**](./depth-first-search/): Explores as far as possible along each branch before backtracking, used to traverse or search in graphs.
 
-- [**Dikstra's Algorithm**](./dikstras-algorithm/): Finds the shortest path between nodes in a weighted graph, where the edges have non-negative weights.
+- [**Dikstra's Algorithm**](./dijkstras-algorithm/): Finds the shortest path between nodes in a weighted graph, where the edges have non-negative weights.
 
 - Bellman-Ford Algorithm: Finds the shortest path between nodes in a weighted graph, even when the edges have negative weights.
 
