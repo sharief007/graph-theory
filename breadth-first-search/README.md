@@ -101,12 +101,6 @@ let's consider a few different types of graphs and perform BFS on them.
 **Traversal Results starting from node 0**:
 - BFS: 0 1 3 4
 
-### Complexity Analysis
-
-- **Time Complexity:** In the worst case, where every node is reachable from the source, BFS visits every node once, which gives a time complexity of O(V + E), where V is the number of vertices and E is the number of edges.
-
-- **Space Complexity:** The space complexity is O(V) for the visited array and O(V) for the queue, giving a total of O(V).
-
 ### Implementation
 
 ```java
@@ -142,3 +136,9 @@ public class BFS {
     }
 }
 ```
+
+### Complexity Analysis
+
+- **Time Complexity:** In the worst case, where every node is reachable from the source, BFS visits every node once, which gives a time complexity of O(V + E), where V is the number of vertices and E is the number of edges.
+
+- **Space Complexity:** The space complexity is O(V) for the visited array and O(V) for the queue, giving a total of O(V).
