@@ -122,8 +122,6 @@ Empty graph, no edges.
 5. **Repeat**:
    - Repeat steps 2 to 4 until all vertices are visited.
 
-Sure, I can provide you with a Java implementation of Prim's algorithm along with explanations for the code. I'll also mention the time and space complexities.
-
 ```java
 import java.util.*;
 
