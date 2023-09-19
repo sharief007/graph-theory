@@ -1,16 +1,13 @@
 
 # Graph Algorithms
 
-
-
-
 - [**Breadth First Search (BFS)**](./breadth-first-search/): Finds the shortest path from a source vertex to all other vertices in an unweighted graph.
 
 - [**Depth First Search (DFS)**](./depth-first-search/): Explores as far as possible along each branch before backtracking, used to traverse or search in graphs.
 
-- [**Dikstra's Algorithm**](./dijkstras-algorithm/): Finds the shortest path between nodes in a weighted graph, where the edges have non-negative weights.
+- [**Dijkstra's Algorithm**](./dijkstras-algorithm/): Finds the shortest path between nodes in a weighted graph, where the edges have non-negative weights.
 
-- Bellman-Ford Algorithm: Finds the shortest path between nodes in a weighted graph, even when the edges have negative weights.
+- [**Bellman-Ford Algorithm**](./bellman-ford-algorithm/): Finds the shortest path between nodes in a weighted graph, even when the edges have negative weights.
 
 - Floyd-Warshall Algorithm: Finds the shortest paths between all pairs of nodes in a weighted graph. It works with both positive and negative edge weights.
 
