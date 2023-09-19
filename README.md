@@ -9,9 +9,9 @@
 
 - [**Bellman-Ford Algorithm**](./bellman-ford-algorithm/): Finds the shortest path between nodes in a weighted graph, even when the edges have negative weights.
 
-- Floyd-Warshall Algorithm: Finds the shortest paths between all pairs of nodes in a weighted graph. It works with both positive and negative edge weights.
+- [**Floyd-Warshall Algorithm**](./floyd-warshall-algorithm/): Finds the shortest paths between all pairs of nodes in a weighted graph. It works with both positive and negative edge weights.
 
-- Prim's Algorithm: Finds the minimum spanning tree (MST) of a weighted undirected graph, which connects all the vertices with the minimum total edge weight.
+- [**Prim's Algorithm**](./prims-algorithm/): Finds the minimum spanning tree (MST) of a weighted undirected graph, which connects all the vertices with the minimum total edge weight.
 
 - Kruskal's Algorithm: Finds the minimum spanning tree of a weighted undirected graph, also by selecting edges with minimum weight.
 
