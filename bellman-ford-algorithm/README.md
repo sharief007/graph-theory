@@ -8,6 +8,106 @@ The Bellman-Ford algorithm is a widely used algorithm in graph theory and networ
 
 - **Negative Weight Edges:** It can handle graphs with negative weight edges, but it cannot handle graphs with negative cycles. If a graph contains a negative cycle, the algorithm will detect it.
 
+### Examples
+
+### 1. Directed Acyclic Graph (DAG):
+
+```mermaid
+graph TD;
+    A((A)) -->|2| B((B));
+    A -->|4| C((C));
+    B -->|1| D((D));
+    C -->|3| D;
+    B -->|6| E((E));
+    D -->|1| E;
+    C -->|2| F((F));
+    E -->|3| F;
+```
+Vertex B is at distance 2. Path is: B <- A  
+Vertex C is at distance 4. Path is: C <- A  
+Vertex D is at distance 5. Path is: D <- B <- A  
+Vertex E is at distance 8. Path is: E <- F <- C <- A  
+Vertex F is at distance 7. Path is: F <- C <- A  
+
+### 2. Negative Weight Edges:
+
+```mermaid
+graph TD;
+    A((A)) -->|-1| B((B));
+    A -->|4| C((C));
+    B -->|3| D((D));
+    C -->|2| D;
+    B -->|-2| E((E));
+    D -->|1| E;
+    C -->|5| F((F));
+    E -->|2| F;
+```
+Vertex B is at distance -1. Path is: B <- A  
+Vertex C is at distance 3. Path is: C <- A  
+Vertex D is at distance 2. Path is: D <- B <- A  
+Vertex E is at distance 0. Path is: E <- D <- B <- A  
+Vertex F is at distance 7. Path is: F <- C <- A  
+Vertex H is at distance 3. Path is: H <- D <- B <- A  
+
+### 3. Graph with Negative Cycle:
+
+```mermaid
+graph TD;
+    A((A)) -->|1| B((B));
+    B -->|-2| C((C));
+    C -->|4| D((D));
+    D -->|3| A;
+```
+Graph contains negative weight cycle. 
+
+### 4. Graph with Disconnected Components:
+
+```mermaid
+graph TD;
+    A((A)) -->|2| B((B));
+    C((C)) -->|1| D((D));
+    E((E)) -->|3| F((F));
+    G((G)) -->|4| H((H));
+```
+
+Vertex B is at distance 2. Path is: B <- A  
+Vertex C is at distance Infinity. Path is: C  
+Vertex D is at distance Infinity. Path is: D  
+Vertex E is at distance Infinity. Path is: E  
+Vertex F is at distance Infinity. Path is: F  
+Vertex G is at distance Infinity. Path is: G  
+Vertex H is at distance Infinity. Path is: H  
+
+
+### 5. Single Node Graph:
+
+```mermaid
+graph TD;
+    A((A));
+```
+In this case, there is only one vertex, so the distance from A to itself is 0, and there are no other vertices to reach.
+
+### 6. Single Edge Graph:
+
+```mermaid
+graph TD;
+    A((A)) -->|2| B((B));
+```
+Vertex B is at distance 2. Path is: B <- A  
+
+### 7. Graph with No Edges:
+
+```mermaid
+graph TD;
+    A((A));
+    B((B));
+    C((C));
+```
+Vertex A is at distance 0. Path is: A  
+Vertex B is at distance Infinity. Path is:   
+Vertex C is at distance Infinity. Path is:   
+
+
 ### Algorithm Steps:
 
 1. **Initialization:**
