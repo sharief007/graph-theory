@@ -2,6 +2,115 @@
 
 The Floyd-Warshall algorithm is a dynamic programming algorithm used for finding the shortest paths between all pairs of vertices in a weighted directed graph. It is capable of handling graphs with both positive and negative edge weights, as long as there are no negative cycles.
 
+### Examples
+
+Understood! Here are some textual representations of different types of graphs using mermaid.js code:
+
+### Graph 1: Directed Weighted Graph
+
+```mermaid
+graph TD;
+  A((A)) --2--> B((B));
+  A --4--> C((C));
+  B --1--> C;
+  B --7--> D((D));
+  C --3--> D;
+  D --5--> A;
+```
+
+```
+Shortest distances between every pair of vertices:
+0	2	3	5	
+8	0	1	3	
+5	3	0	1	
+2	4	5	0	
+```
+
+### Graph 2: Weighted Directed Acyclic Graph (DAG)
+
+```mermaid
+graph TD;
+  A((A)) --3--> B((B));
+  A --2--> C((C));
+  B --1--> D((D));
+  C --4--> D;
+  D --2--> E((E));
+```
+
+```
+Shortest distances between every pair of vertices:
+0	3	2	4	6	
+8	0	1	3	5	
+5	6	0	1	3	
+2	5	3	0	2	
+9	2	3	5	0	
+```
+
+### Graph 3: Weighted Directed Graph with Negative Edge
+
+```mermaid
+graph TD;
+  A((A)) --1--> B((B));
+  B --3--> C((C));
+  C --2--> D((D));
+  D -- -6 --> A;
+```
+
+```
+Shortest distances between every pair of vertices:
+0	1	4	-1	
+6	0	3	2	
+3	2	0	5	
+-6	3	2	0	
+```
+
+### Graph 4: Complete Graph
+
+```mermaid
+graph TD;
+  A((A)) --1--> B((B));
+  A --1--> C((C));
+  A --1--> D((D));
+  B --1--> C;
+  B --1--> D;
+  C --1--> D;
+```
+
+```
+Shortest distances between every pair of vertices:
+0	1	1	1	
+1	0	1	1	
+1	1	0	1	
+1	1	1	0	
+```
+
+### Graph 5: Disconnected Graph
+
+```mermaid
+graph TD;
+  A((A)) --1--> B((B));
+  C((C)) --1--> D((D));
+```
+
+```
+Shortest distances between every pair of vertices:
+0	INF	1	INF	
+INF	0	INF	1	
+INF	INF	0	INF	
+INF	INF	INF	0	
+```
+
+### Graph 6: Single Vertex
+
+```mermaid
+graph TD;
+  A((A));
+```
+
+```
+Shortest distances between every pair of vertices:
+0	
+```
 
 ### Key Concepts:
 1. **Adjacency Matrix**:
