@@ -58,6 +58,7 @@ graph TD;
     C -->|4| D((D));
     D -->|3| A;
 ```
+A --> B(1) --> C(-2) --> D(4) --> A  
 Graph contains negative weight cycle. 
 
 ### 4. Graph with Disconnected Components:
