@@ -13,7 +13,7 @@
 
 - [**Prim's Algorithm**](./prims-algorithm/): Finds the minimum spanning tree (MST) of a weighted undirected graph, which connects all the vertices with the minimum total edge weight.
 
-- Kruskal's Algorithm: Finds the minimum spanning tree of a weighted undirected graph, also by selecting edges with minimum weight.
+- [**Kruskal's Algorithm**](./kruskals-algorithm/): Finds the minimum spanning tree of a weighted undirected graph, also by selecting edges with minimum weight.
 
 - Topological Sort: Arranges the nodes in a directed acyclic graph (DAG) in a linear order such that for every directed edge (u, v), node u comes before node v.
 
