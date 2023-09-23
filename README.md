@@ -15,7 +15,7 @@
 
 - [**Kruskal's Algorithm**](./kruskals-algorithm/): Finds the minimum spanning tree of a weighted undirected graph, also by selecting edges with minimum weight.
 
-- Topological Sort: Arranges the nodes in a directed acyclic graph (DAG) in a linear order such that for every directed edge (u, v), node u comes before node v.
+- [**Topological Sort**](./topological-sort/): Arranges the nodes in a directed acyclic graph (DAG) in a linear order such that for every directed edge (u, v), node u comes before node v.
 
 - Strongly Connected Components (SCC): Identifies groups of nodes in a directed graph where each node is reachable from every other node in the same group.
 
